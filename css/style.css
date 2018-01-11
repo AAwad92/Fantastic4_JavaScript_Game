@@ -1,1 +1,172 @@
+#hardPlayArea{
+  display: none;
+}
+
+
+#mediumPlayArea{
+  display: none;
+}
+
+/* Medium Play Area */
+#mediumPlayArea table{
+    position: absolute;
+    top: -10px;
+    left:460px;
+}
+
+
+/* hard Play Area */
+
+#hardPlayArea table{
+    position: absolute;
+    top: -85px;
+    left:400px;
+    border: 1px solid white;
+    transform: rotateX(65deg);
+    /**background-image: url(../images/back1.jpg);**/
+}
+
+/** Mode **/
+#mode{
+    position: absolute;
+    top: 440px;
+    left:595px;
+}
+
+#show , #show_hard,#show_medi{
+  font-size: 22px;
+  padding: 10px;
+  height: 80px;
+  width: 80px;
+  border-radius: 200px;
+  cursor: pointer;
+  margin-right: 20px;
+  color: orange;
+}
+
+#show_medi{
+  font-size: 27px;
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  top: -220px;
+  right: -560px;
+}
+
+#show_hard{
+  font-size: 32px;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: -305px;
+  right: -610px;
+}
+
+
+#dashBoard{
+  color: orange;
+  text-align: center;
+  margin-right: 220px;
+  margin-top: 0;
+  position: relative;
+  top: -70px;
+  width: 70%
+}
+
+#dashBoard h3{
+  display: inline;
+  font-size: 30px;
+}
+
+#dashBoard h3:first-child{
+  display: block;
+}
+
+.playPanel{
+    perspective: 600px;
+
+}
+
+table{
+    position: absolute;
+    top: 30px;
+    left:507px;
+    border: 1px solid white;
+    transform: rotateX(65deg);
+    /**background-image: url(../images/back1.jpg);**/
+}
+
+.place{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid white;
+    perspective: 600px;
+
+}
+
+#player{
+    height: 150px;
+    width: 150px;
+    transform: rotateY(45deg);
+    position: relative;
+    bottom: 40px;
+    right: 20px;
+    animation: jump 1s infinite;
+
+}
+
+@keyframes jump {
+	0% {
+    bottom: 40px;
+		animation-timing-function: ease-in;
+	}
+	50% {
+		bottom: 50px;
+
+		animation-timing-function: ease-out;
+	}
+	55% {
+		bottom: 49px;
+
+		border-radius: 70px;
+		animation-timing-function: ease-in;
+	}
+	65% {
+		bottom: 47px;
+
+		border-radius: 70px;
+		animation-timing-function: ease-out;
+	}
+	95% {
+		bottom: 41px;
+		animation-timing-function: ease-in;
+	}
+	100% {
+		bottom: 40px;
+		animation-timing-function: ease-in;
+	}
+}
+
+
+.button{
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	/* font-family:Arial; */
+	font-size:28px;
+	font-weight:bold;
+	padding:19px 66px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+  margin: 20px;
+  font-family: 'Lily Script One', cursive;
+
+  color: orange;
+
+}
 
