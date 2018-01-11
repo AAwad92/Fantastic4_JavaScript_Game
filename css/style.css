@@ -1,1 +1,177 @@
 
+
+#EasyPlayArea{
+  display: none;
+}
+
+
+*{
+    margin: auto;
+    padding: 0;
+    font-family: 'Lily Script One', cursive;
+}
+
+body{
+  background-image: url('../images/background/background_space_1.jpg');
+  background-repeat: no-repeat;
+  background-size: 1370px 660px;
+}
+
+button:focus {
+  outline:0;
+}
+
+/* Next & previous buttons */
+
+#prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 2s ease;
+  border-radius: 0 3px 3px 0;
+  border: 0;
+  /*transition: width 1s, height 1s;*/
+}
+
+/* Position the "next button" to the right */
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+#prev:hover, #next:hover {
+  background-color: rgba(0,0,0,0.8);
+  width: 70px;
+  height: 70px;
+}
+
+/** Esasy Play Area **/
+
+
+
+#dashBoard{
+  color: orange;
+  text-align: center;
+  margin-right: 220px;
+  margin-top: 0;
+  position: relative;
+  top: -70px;
+  width: 70%
+}
+
+#dashBoard h3{
+  display: inline;
+  font-size: 30px;
+}
+
+#dashBoard h3:first-child{
+  display: block;
+}
+
+.playPanel{
+    perspective: 600px;
+
+}
+
+table{
+    position: absolute;
+    top: 30px;
+    left:507px;
+    border: 1px solid white;
+    transform: rotateX(65deg);
+    /**background-image: url(../images/back1.jpg);**/
+}
+
+.place{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid white;
+    perspective: 600px;
+
+}
+
+#player{
+    height: 150px;
+    width: 150px;
+    transform: rotateY(45deg);
+    position: relative;
+    bottom: 40px;
+    right: 20px;
+    animation: jump 1s infinite;
+
+}
+
+@keyframes jump {
+	0% {
+    bottom: 40px;
+		animation-timing-function: ease-in;
+	}
+	50% {
+		bottom: 50px;
+
+		animation-timing-function: ease-out;
+	}
+	55% {
+		bottom: 49px;
+
+		border-radius: 70px;
+		animation-timing-function: ease-in;
+	}
+	65% {
+		bottom: 47px;
+
+		border-radius: 70px;
+		animation-timing-function: ease-out;
+	}
+	95% {
+		bottom: 41px;
+		animation-timing-function: ease-in;
+	}
+	100% {
+		bottom: 40px;
+		animation-timing-function: ease-in;
+	}
+}
+
+
+.button{
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	/* font-family:Arial; */
+	font-size:28px;
+	font-weight:bold;
+	padding:19px 66px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+  margin: 20px;
+  font-family: 'Lily Script One', cursive;
+
+  color: orange;
+
+}
+
+
+#soundTurn{
+  background-color: transparent;
+  border: 0;
+
+}
+
+#sound{
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+}

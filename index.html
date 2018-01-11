@@ -1,21 +1,73 @@
 <!DOCTYPE Html>
 <html>
-    <head>
 
-        <title>
+<head>
 
-        </title>
+  <title>
 
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  </title>
 
-    </head>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet">
 
-    <body>
+</head>
 
-        <script src="js/javaScript.js"></script>
-    </body>
+<body>
+
+  <!-- the element found on every page -->
+  <button id="prev">❮</button>
+  <button id="next">❯</button>
+
+  <div id="sound">
+    <button id="soundTurn"><img id="sound" src="images/sound_on.png"></button>
+  </div>
+
+  <audio id="audio" autoplay loop>
+    <source src="tracks/track1.mp3" type="audio/mpeg">
+  </audio>
 
 
+  <!-- Level Easy Page -->
+  <div id="EasyPlayArea" class="pages">
+    <div class="playPanel">
+      <table>
+        <tr>
+          <td><div id="easy_btn1" class="place easy"></div></td>
+          <td><div id="easy_btn2" class="place easy"></div></td>
+          <td><div id="easy_btn3" class="place easy"></div></td>
+        </tr>
+
+        <tr>
+          <td><div id="easy_btn4" class="place easy"></div></td>
+          <td><div id="easy_btn5" class="place easy"><img id="player" src="images/penguin.png"></div></td>
+          <td><div id="easy_btn6" class="place easy"></div></td>
+        </tr>
+
+        <tr>
+          <td><div id="easy_btn7" class="place easy"></div></td>
+          <td><div id="easy_btn8" class="place easy"></div></td>
+          <td><div id="easy_btn9" class="place easy"></div></td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div id="mode">
+      <button id="show" class="button">Show</button>
+    </div>
+
+    <div id="dashBoard">
+      <h3>Result : <span id="result"></span></h3>
+      <h3>&nbsp;&nbsp;level : <span id="level"></span></h3>
+      <h3>&nbsp;&nbsp;score : <span id="score"></span></h3>
+      <h3>&nbsp;&nbsp;lives : <span id="lives"></span> <img id="heart" src="images/heart.png" /></h3>
+      <h3>&nbsp;&nbsp;moves : <span id="moves"></span></h3>
+
+    </div>
+
+  </div>
+  <!-- the end of Easy area -->
+</body>
 </html>
