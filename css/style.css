@@ -1,1 +1,157 @@
 
+
+#levels{
+  display: none;
+}
+
+#preloader{
+    display: none;
+}
+
+#start{
+  display: none;
+}
+
+*{
+    margin: auto;
+    padding: 0;
+    font-family: 'Lily Script One', cursive;
+}
+
+body{
+  background-image: url('../images/background/background_space_1.jpg');
+  background-repeat: no-repeat;
+  background-size: 1370px 660px;
+}
+
+button:focus {
+  outline:0;
+}
+
+#heart{
+  height: 25px;
+  width: 25px;
+}
+
+/* preloader page */
+
+
+
+#preloader img{
+
+  height: 200px;
+  width:200px;
+  position: relative;
+  top: 40px;
+}
+
+#preloader h1{
+  /* display: inline; */
+
+  font-size: 100px;
+  color: orange;
+  text-align: center;
+}
+
+#preloader p{
+  color: orange;
+  font-size: 40px;
+  text-align: center;
+  /* animation: flash 1.6s infinite; */
+  margin-top: 40px;
+
+}
+
+#userName{
+  height: 30px;
+  width: 450px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+/* start page */
+
+#start img{
+
+  height: 150px;
+  width: 150px;
+  position: relative;
+  top: 10px;
+}
+
+#start h1{
+  /* display: inline; */
+
+  font-size: 100px;
+  color: orange;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+#start button{
+  width: 400px;
+  background-color: transparent;
+}
+
+#start button:hover{
+  background-color: blue;
+}
+
+#start div{
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+/
+/** levels Area **/
+
+
+
+#levels{
+  text-align: center;
+}
+
+.menu_level{
+  display: inline-block;
+  width: 45%;
+  float: left;
+}
+
+#menu_level{
+  margin-top: 35px;
+
+}
+
+#charater_level img{
+  height: 500px;
+  width: 400px;
+  margin-left: 80px;
+}
+
+.button{
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	/* font-family:Arial; */
+	font-size:28px;
+	font-weight:bold;
+	padding:19px 66px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+  margin: 20px;
+  font-family: 'Lily Script One', cursive;
+
+  color: orange;
+
+}
+
+#select_level{
+  color: orange;
+  font-size: 30px;
+}

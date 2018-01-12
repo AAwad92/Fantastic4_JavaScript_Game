@@ -1,21 +1,83 @@
 <!DOCTYPE Html>
 <html>
-    <head>
 
-        <title>
+<head>
 
-        </title>
+  <title>
 
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  </title>
 
-    </head>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet">
 
-    <body>
+</head>
 
-        <script src="js/javaScript.js"></script>
-    </body>
+<body>
+
+
+  <!-- Preloadr Page -->
+  <div id="preloader" class="pages">
+    <h1>Fantastic <img src="images/minion_start.png">Minion</h1>
+      <p>
+        User Name : <input id="userName" placeholder="e.g. A7la Developers Wla A" value=""/>
+      </p>
+      <p>
+        <button id="enjoy" class="button">Let's enjoy</button>
+      </p>
+
+  </div>
+  <!-- the end of preloader area -->
+
+  <!-- the start of star area -->
+
+  <div id="start" class="pages">
+
+    <h1><img src="images/minions/title.png"> Fantastic Minion <img src="images/minions/title2.png"></h1>
+
+    <div>
+      <button id="newGame" class="button">New Game</button>
+      <button id="settings" class="button">Settings</button>
+    </div>
+    <div>
+      <button id="about" class="button">About</button>
+      <button id="exit" class="button">Exit</button>
+    </div>
+
+
+  </div>
+
+  <!-- the End of start area -->
+
+
+  <!-- the start of levels area -->
+  <div id="levels" class="pages">
+
+    <div id="charater_level" class="menu_level">
+      <img src="images/minion.png" />
+    </div>
+
+    <div class="menu menu_level" id="menu_level">
+
+      <div id="select_level">
+        <h1>Select Your Level</h1>
+      </div>
+
+      <button id="easy" class="button">Easy</button>
+      <br>
+      <button id="medium" class="button">Medium</button>
+      <br>
+      <button id="hard" class="button">Hard</button>
+      <br>
+    </div>
+
+  </div>
+  <!-- the end of levels area -->
+
+
+  <script src="js/javaScript.js"></script>
+</body>
 
 
 </html>
