@@ -1,0 +1,49 @@
+body{
+	background-image: url("images/background/background_space_1.jpg");
+	background-repeat: no-repeat;
+	background-size: 1366px 640px;
+	color: yellow;
+	
+}
+#address{
+	position: absolute;
+	top: 27px;
+	left: 535px;
+	font-size: 5vw;
+	box-sizing: border-box;
+}
+#outer{
+	background: black;
+	height:20px;
+	width:400px;
+	position: absolute;
+	top:450px;
+	left:560px;
+	border-radius: 175px;
+}
+#inner{
+	background:yellow;
+	position: relative;
+	height:20px;
+	width:0px;
+	top:0px;
+	border-radius: 175px;
+	animation: move 2s infinite ;
+}
+*{
+	font-family: 'Lily Script One', cursive;
+}
+#minion{
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	left: 0px;
+}
+
+/*@keyframes move{
+	0%   {width: 0%;}
+    25%  {width: 200%;}
+    50%  {width: 100%;}
+    75%  {width: 200%;}
+    100% {width: 0%;}
+}*/

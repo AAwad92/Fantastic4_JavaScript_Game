@@ -1,0 +1,50 @@
+body{
+	background-image:url('images/background/background_space_1.jpg'); 
+	background-repeat:no-repeat;
+	background-size: 1370px 660px;
+	text-align: center;
+	width:660px;
+	color: yellow;
+	
+
+
+}
+.ball{
+	color: yellow;
+	height:150px;
+	width:150px;
+	background-color: #008080;
+	display: inline-block;
+	border-radius: 100px;
+	margin-right: 300px;
+
+}
+#levels{
+	position: absolute;
+	top:290px;
+	left:120px;
+
+}
+#hard{
+	margin-right: 0px;
+}
+.numbers{
+	position: relative;
+	top: 50px;
+	font-size: 40px;
+}
+*{
+	font-family: 'Lily Script One', cursive;
+}
+#minion{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 235px;
+	left: 145px;
+}
+#address{
+	position: absolute;
+	left:350px;
+	font-size: 110px;
+}
