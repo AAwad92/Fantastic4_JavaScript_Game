@@ -1,21 +1,82 @@
 <!DOCTYPE Html>
 <html>
-    <head>
 
-        <title>
+<head>
 
-        </title>
+  <title>
 
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  </title>
 
-    </head>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet">
 
-    <body>
+</head>
 
-        <script src="js/javaScript.js"></script>
-    </body>
+<body>
+
+
+  <!-- the model Box -->
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>You Have Won .....</h2>
+      </div>
+      <div class="modal-body">
+        <p>
+          <img class="badge" src="images/badges/iron_minion.gif" />
+        </p>
+      </div>
+      <div class="modal-footer">
+        <h3>Awad Badge</h3>
+        <p>
+          For Winning three times in row
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- End of Model Box -->
+
+  <!-- the start of level map area -->
+  <div id="map">
+
+    <div id="level1" class="levels">1</div>
+    <div id="level2" class="levels"><div class="filler"></div>2</div>
+    <div id="level3" class="levels"><div class="filler"></div>3</div>
+    <div id="level4" class="levels"><div class="filler"></div>4</div>
+    <div id="level5" class="levels"><div class="filler"></div>5</div>
+    <div id="level6" class="levels"><div class="filler"></div>6</div>
+    <div id="level7" class="levels"><div class="filler"></div>7</div>
+    <div id="level8" class="levels"><div class="filler"></div>8</div>
+    <div id="level9" class="levels"><div class="filler"></div>9</div>
+    <div id="level10" class="levels"><div class="filler"></div>10</div>
+
+    <img id="map_character" src="images/minions/dracula_minion.png" />
+
+    <div id="levelType">
+      <h1>Easy</h1>
+      <h1>Level</h1>
+    </div>
+
+
+  </div>
+  <!-- the end of level map area -->
+
+  <!-- the start of looser area -->
+    <div id="looser" class="pages">
+      <img id="looserImg" src="images/minions/looser.png"/>
+      <h1>Losser ....</h1>
+    </div>
+  <!-- the end of looser area -->
+
+  <script src="js/javaScript.js"></script>
+</body>
 
 
 </html>
