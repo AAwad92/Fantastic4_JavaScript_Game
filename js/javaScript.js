@@ -182,7 +182,11 @@ class easyLevel extends Levels{
     this.setPattern([5]);
     this.setIdToMove("easy_btn5");
     this.setNumOfMoves(0);
-    this.setQuitFlag(0);
+    // this.setQuitFlag(0);
+    this.setQuitFlag(-1)
+    this.setPlayMode(false)
+    this.setShowMode(true)
+    this.setThreadMode(false)
     document.getElementById("result").innerHTML = "";
     document.getElementsByTagName("table")[0].style.border = "1px solid rgba(255,255,255,0.2)";
     var place = document.getElementsByClassName("place");
@@ -257,6 +261,14 @@ class easyLevel extends Levels{
 
   looser(){
     setTimeout(function(){
+      player1.setLevel(1);
+      player1.setScore(0);
+      player1.setLives(3);
+      easy_level.setDefaultNew();
+      medi_level.setDefaultNew();
+      hard_level.setDefaultNew();
+      map_for_levels.setDefault();
+      transfer_for_levels.setDefault();
       easy.hide();
       badges.hide();
       looser.show();
@@ -391,8 +403,13 @@ class mediLevel extends easyLevel{
     this.setPattern([6]);
     this.setIdToMove("medi_btn6");
     this.setNumOfMoves(0);
-    this.setQuitFlag(0);
+    // this.setQuitFlag(0);
+    this.setQuitFlag(-1)
+    this.setPlayMode(false)
+    this.setShowMode(true)
+    this.setThreadMode(false)
     document.getElementById("result").innerHTML = "";
+    document.getElementById("moves").innerHTML = "";
     document.getElementsByTagName("table")[0].style.border = "1px solid rgba(255,255,255,0.2)";
     var place = document.getElementsByClassName("place");
     for(let i = 0;i < place.length;i++){
@@ -1069,4 +1086,3 @@ document.getElementById("yes").onclick = function() {
 document.getElementById("no").onclick = function() {
     exitModal.style.display = "none";
 }
-
