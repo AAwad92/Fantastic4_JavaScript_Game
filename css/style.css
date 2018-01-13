@@ -1,1 +1,768 @@
 
+
+#sections{
+  /* display: none; */
+}
+
+#hardPlayArea{
+  display: none;
+}
+
+#EasyPlayArea{
+  display: none;
+}
+
+#mediumPlayArea{
+  display: none;
+}
+
+#levels{
+  display: none;
+}
+
+#levelTransfer{
+  display: none;
+}
+
+#preloader{
+    /* display: none; */
+}
+
+#map{
+  display: none;
+}
+
+#start{
+  display: none;
+}
+
+#looser{
+  display: none;
+}
+
+#selectCharacter{
+  display: none;
+}
+
+#loading{
+  /* display: none; */
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#loading h1{
+  position: relative;
+  top: 50%;
+}
+
+#wholePage{
+  display: none;
+}
+
+/* page arrangements */
+
+*{
+    margin: auto;
+    padding: 0;
+    font-family: 'Lily Script One', cursive;
+}
+
+html,body{
+  height: 100%;
+  overflow: hidden;
+}
+
+body{
+  background-image: url('../images/background/background_space_1.jpg');
+  background-repeat: no-repeat;
+  background-size: 1370px 660px;
+  scroll-behavior: none;
+}
+
+button:focus {
+  outline:0;
+}
+
+#heart{
+  height: 25px;
+  width: 25px;
+}
+
+/* elements found on almost every page */
+
+#badges{
+  display: none;
+  float: right;
+  text-align: right;
+  position: relative;
+  top: -60px;
+  right: 30px;
+}
+
+#badges img{
+  width: 70px;
+  height: 70px;
+  margin-left: -20px;
+  filter: grayscale(100%);
+}
+
+
+/* preloader page */
+
+#preloader img{
+
+  height: 200px;
+  width:200px;
+  position: relative;
+  top: 40px;
+}
+
+#preloader h1{
+  /* display: inline; */
+
+  font-size: 100px;
+  color: orange;
+  text-align: center;
+}
+
+#preloader p{
+  color: orange;
+  font-size: 40px;
+  text-align: center;
+  /* animation: flash 1.6s infinite; */
+  margin-top: 40px;
+
+}
+
+#userName{
+  height: 30px;
+  width: 450px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+/* start page */
+
+#start img{
+
+  height: 150px;
+  width: 150px;
+  position: relative;
+  top: 10px;
+}
+
+#start h1{
+  /* display: inline; */
+
+  font-size: 100px;
+  color: orange;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+#start button{
+  width: 400px;
+  background-color: transparent;
+}
+
+#start button:hover{
+  background-color: blue;
+}
+
+#start div{
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+/* Next & previous buttons */
+
+#prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 2s ease;
+  border-radius: 0 3px 3px 0;
+  border: 0;
+  display: none;
+  /*transition: width 1s, height 1s;*/
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+#prev:hover {
+  background-color: rgba(4,2,5,2);
+  color: white;
+  width: 70px;
+  height: 70px;
+}
+
+/** Easy Play Area **/
+
+#directToMap{
+  transform: rotateZ(-90deg);
+  position: absolute;
+  right: -130px;
+  top: 290px;
+}
+
+#dashBoard{
+  color: orange;
+  text-align: center;
+  margin-right: 220px;
+  margin-top: 0;
+  position: relative;
+  top: -70px;
+  width: 70%
+}
+
+#dashBoard h3{
+  display: inline;
+  font-size: 30px;
+}
+
+#dashBoard h3:first-child{
+  display: block;
+}
+
+.playPanel{
+    perspective: 600px;
+
+}
+
+table{
+    position: absolute;
+    top: 30px;
+    left:507px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transform: rotateX(65deg);
+    /**background-image: url(../images/back1.jpg);**/
+    overflow: visible;
+}
+
+.place{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    /* border: 1px solid white; */
+    border : solid 1px rgba(255,255,255,0.2);
+    perspective: 600px;
+    overflow: visible;
+
+}
+
+#player{
+    height: 150px;
+    width: 230px;
+    transform: rotateY(45deg);
+    position: relative;
+    bottom: 55px;
+    right: 55px;
+    animation: jump 1s infinite;
+    overflow: visible;
+    z-index: 99;
+
+}
+
+@keyframes jump {
+	0% {
+    bottom: 55px;
+		animation-timing-function: ease-in;
+	}
+	50% {
+		bottom: 65px;
+
+		animation-timing-function: ease-out;
+	}
+	55% {
+		bottom: 64px;
+
+		border-radius: 70px;
+		animation-timing-function: ease-in;
+	}
+	65% {
+		bottom: 62px;
+
+		border-radius: 70px;
+		animation-timing-function: ease-out;
+	}
+	95% {
+		bottom: 56px;
+		animation-timing-function: ease-in;
+	}
+	100% {
+		bottom: 55px;
+		animation-timing-function: ease-in;
+	}
+}
+
+/* Medium Play Area */
+#mediumPlayArea table{
+    position: absolute;
+    top: -10px;
+    left:460px;
+}
+
+
+/* hard Play Area */
+
+#hardPlayArea table{
+    position: absolute;
+    top: -85px;
+    left:400px;
+    border: 1px solid white;
+    transform: rotateX(65deg);
+    /**background-image: url(../images/back1.jpg);**/
+}
+
+/** Mode **/
+#mode{
+    position: absolute;
+    top: 440px;
+    left:595px;
+}
+
+#show , #show_hard,#show_medi{
+  font-size: 22px;
+  padding: 10px;
+  height: 80px;
+  width: 80px;
+  border-radius: 200px;
+  cursor: pointer;
+  margin-right: 20px;
+  color: orange;
+}
+
+#show_medi{
+  font-size: 27px;
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  top: -220px;
+  right: -560px;
+}
+
+#show_hard{
+  font-size: 32px;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: -305px;
+  right: -610px;
+}
+/** levels Area **/
+
+
+
+#levels{
+  text-align: center;
+}
+
+.menu_level{
+  display: inline-block;
+  width: 45%;
+  float: left;
+}
+
+#menu_level{
+  margin-top: 35px;
+
+}
+
+#charater_level img{
+  height: 500px;
+  width: 400px;
+  margin-left: 80px;
+}
+
+.button{
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	/* font-family:Arial; */
+	font-size:28px;
+	font-weight:bold;
+	padding:19px 66px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+  margin: 20px;
+  font-family: 'Lily Script One', cursive;
+
+  color: orange;
+
+}
+
+#select_level{
+  color: orange;
+  font-size: 30px;
+}
+
+#soundTurn{
+  background-color: transparent;
+  border: 0;
+
+}
+
+#sound{
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+}
+
+
+/** Statrt Area **/
+
+.levels{
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  box-shadow:inset 0px 0px 15px 3px #23395e;
+	background-color:#2e466e;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:orange;
+	font-size:38px;
+	font-weight:bold;
+  text-align: center;
+  text-align: bottom;
+
+}
+
+.filler{
+  height: 50%;
+}
+
+/* the start of map style */
+
+#levelType{
+  position: absolute;
+  right: 150px;
+  top: -70px;
+  font-size: 60px;
+  color: orange;
+}
+
+#levelType h1:first-child{
+  position: relative;
+  top: 70px;
+  color: orange;
+}
+
+#level1{
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+#level2{
+  position: absolute;
+  bottom: 50px;
+  left: 400px;
+}
+
+#level3{
+  position: absolute;
+  bottom: 50px;
+  left: 750px;
+}
+
+#level4{
+  position: absolute;
+  bottom: 50px;
+  left: 1100px;
+}
+
+#level5{
+  position: absolute;
+  bottom: 250px;
+  left: 1200px;
+}
+
+#level6{
+  position: absolute;
+  bottom: 250px;
+  left: 850px;
+}
+
+#level7{
+  position: absolute;
+  bottom: 250px;
+  left: 500px;
+}
+
+#level8{
+  position: absolute;
+  bottom: 250px;
+  left: 150px;
+}
+
+#level9{
+  position: absolute;
+  bottom: 450px;
+  left: 250px;
+}
+
+#level10{
+  position: absolute;
+  bottom: 450px;
+  left: 600px;
+}
+
+#map_character{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: rgba(0,0,0,0.1);
+    color: black;
+    height: 15%;
+    text-align: center;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 2px 16px;
+  height: 55%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: rgba(0,0,0,0.1);
+    color: black;
+    height: 30%;
+    text-align: center;
+
+}
+
+.modal-footer h3{
+  font-size: 40px;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 7% auto; /* 15% from the top and centered */
+    padding: 0;
+    border: 1px solid #888;
+    width: 38%;/* Could be more or less, depending on screen size */
+    height: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    text-align: center;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* .modal{
+  text-align: center;
+} */
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.badge{
+  height: 175px;
+  width: 175px;
+}
+
+/* Looser Area */
+
+#looser{
+  text-align: center;
+  height: 100%;
+  position: relative;
+  top: -50px;
+}
+
+#looserImg{
+  height: 485px;
+  width: 400px;
+  position: relative;
+  top: 0;
+}
+
+#looser h1{
+  color: orange;
+  font-size: 50px;
+  position: relative;
+  top: -10px;
+}
+
+/* transfer levels */
+#levelTransfer{
+  height: 500px;
+  text-align: center;
+}
+
+.levTrs{
+  width: 150px;
+  height: 150px;
+}
+
+#levelTransfer .levelWord{
+  position: relative;
+  top: 85px;
+}
+
+#easyLevel{
+  position: absolute;
+  top: 300px;
+  left: 200px;
+}
+
+#mediumLevel{
+  position: absolute;
+  top: 300px;
+  left: 600px;
+}
+
+#hardLevel{
+  position: absolute;
+  top: 300px;
+  left: 1000px;
+}
+
+#transfer_character{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 235px;
+  left: 200px;
+}
+
+#levelTransfer h1{
+  color: orange;
+  font-size: 100px;
+}
+
+
+/* start of select character */
+
+#selectCharacter{
+  text-align: center;
+}
+
+#selectCharacter h1{
+  color: orange;
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+#selectCharacter img{
+  height:300px;
+  width: 300px;
+  transition: width 1s ,height 1s;
+}
+
+#selectCharacter img:hover{
+  height: 400px;
+  width: 400px;
+  cursor: pointer;
+}
+
+.charContainer{
+  display: inline;
+
+}
+
+/* exit check modal  */
+
+#ExitModal .modal-body h1{
+  margin-top: 50px;
+}
+
+#ExitModal .modal-content{
+  border-radius: 50px;
+  width: 45%;
+  height: 300px;
+  margin: 12% auto;
+}
+
+.modal button{
+  height: 65px;
+  width: 100px;
+  margin: 20px;
+  border-radius: 15px;
+  font-size: 30px;
+  color: white;
+}
+
+.modal #yes{
+  background-color: green;
+}
+
+.modal #no{
+  background-color: red;
+}
+
+#ExitModal .modal-body ,#ExitModal .modal-footer{
+  height: 150px;
+}
+
