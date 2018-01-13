@@ -1,21 +1,380 @@
 <!DOCTYPE Html>
 <html>
-    <head>
 
-        <title>
+<head>
 
-        </title>
+  <title>
 
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  </title>
 
-    </head>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet">
 
-    <body>
+</head>
 
-        <script src="js/javaScript.js"></script>
-    </body>
+<body>
+
+  <div id="loading">
+    <h1>Loading ...</h1>
+  </div>
+
+
+  <div id="wholePage">
+    <!-- the element found on every page -->
+    <div id="sections">
+      <button id="prev">❮</button>
+
+      <div id="sound">
+        <button id="soundTurn"><img id="sound" src="images/sound_on.png"></button>
+      </div>
+
+      <audio id="audio" autoplay loop>
+        <source src="tracks/track1.mp3" type="audio/mpeg">
+      </audio>
+
+      <div id="badges">
+        <img id="ironMinion" src="images/badges/ironMinion.gif" />
+        <img id="thorion" src="images/badges/thorion.gif" />
+        <img id="batMinion" src="images/badges/batMinion.gif" />
+        <img id="superMinion" src="images/badges/superMinion.gif" />
+      </div>
+    </div>
+
+    <!-- Preloadr Page -->
+    <div id="preloader" class="pages">
+      <h1>Fantastic <img src="images/minion_start.png">Minion</h1>
+        <p>
+          User Name : <input id="userName" placeholder="e.g. A7la Developers Wla A" value=""/>
+        </p>
+        <p>
+          <button id="enjoy" class="button">Let's enjoy</button>
+        </p>
+
+    </div>
+    <!-- the end of preloader area -->
+
+    <!-- the start of star area -->
+
+    <div id="start" class="pages">
+
+      <h1><img src="images/minions/title.png"> Fantastic Minion <img src="images/minions/title2.png"></h1>
+
+      <div>
+        <button id="newGame" class="button">New Game</button>
+        <button id="settings" class="button">Settings</button>
+      </div>
+      <div>
+        <button id="about" class="button">About</button>
+        <button id="exit" class="button">Exit</button>
+      </div>
+
+
+    </div>
+
+    <!-- the End of start area -->
+
+
+    <!-- the start of levels area -->
+    <div id="levels" class="pages">
+
+      <div id="charater_level" class="menu_level">
+        <img src="images/minion.png" />
+      </div>
+
+      <div class="menu menu_level" id="menu_level">
+
+        <div id="select_level">
+          <h1>Select Your Level</h1>
+        </div>
+
+        <button id="easy" class="button">Easy</button>
+        <br>
+        <button id="medium" class="button">Medium</button>
+        <br>
+        <button id="hard" class="button">Hard</button>
+        <br>
+      </div>
+
+    </div>
+    <!-- the end of levels area -->
+
+
+    <!-- Level Easy Page -->
+    <div id="EasyPlayArea" class="pages">
+      <div class="playPanel">
+        <table>
+          <tr>
+            <td><div id="easy_btn1" class="place easy"></div></td>
+            <td><div id="easy_btn2" class="place easy"></div></td>
+            <td><div id="easy_btn3" class="place easy"></div></td>
+          </tr>
+
+          <tr>
+            <td><div id="easy_btn4" class="place easy"></div></td>
+            <td><div id="easy_btn5" class="place easy"><img id="player" src="images/minions/minions-03.png"></div></td>
+            <td><div id="easy_btn6" class="place easy"></div></td>
+          </tr>
+
+          <tr>
+            <td><div id="easy_btn7" class="place easy"></div></td>
+            <td><div id="easy_btn8" class="place easy"></div></td>
+            <td><div id="easy_btn9" class="place easy"></div></td>
+          </tr>
+        </table>
+      </div>
+
+
+      <div id="mode">
+        <button id="show" class="button">Play</button>
+      </div>
+
+      <!-- <button id="directToMap" class="button">Levels Map</button> -->
+
+      <div id="dashBoard">
+        <h3>Result : <span id="result"></span></h3>
+        <h3>&nbsp;&nbsp;level : <span id="level"></span></h3>
+        <h3>&nbsp;&nbsp;score : <span id="score"></span></h3>
+        <h3>&nbsp;&nbsp;lives : <span id="lives"></span> <img id="heart" src="images/heart.png" /></h3>
+        <h3>&nbsp;&nbsp;moves : <span id="moves"></span></h3>
+
+      </div>
+
+    </div>
+    <!-- the end of Easy area -->
+
+    <!-- Level Medium Page -->
+    <div id="mediumPlayArea" class="pages">
+      <div class="playPanel">
+        <table>
+          <tr>
+            <td><div id="medi_btn1" class="place medi"></div></td>
+            <td><div id="medi_btn2" class="place medi"></div></td>
+            <td><div id="medi_btn3" class="place medi"></div></td>
+            <td><div id="medi_btn4" class="place medi"></div></td>
+          </tr>
+
+          <tr>
+            <td><div id="medi_btn5" class="place medi"></div></td>
+            <td><div id="medi_btn6" class="place medi"><img id="player" src="images/minions/sirene.png"></div></td>
+            <td><div id="medi_btn7" class="place medi"></div></td>
+            <td><div id="medi_btn8" class="place medi"></div></td>
+          </tr>
+
+          <tr>
+            <td><div id="medi_btn9" class="place medi"></div></td>
+            <td><div id="medi_btn10" class="place medi"></div></td>
+            <td><div id="medi_btn11" class="place medi"></div></td>
+            <td><div id="medi_btn12" class="place medi"></div></td>
+          </tr>
+
+          <tr>
+            <td><div id="medi_btn13" class="place medi"></div></td>
+            <td><div id="medi_btn14" class="place medi"></div></td>
+            <td><div id="medi_btn15" class="place medi"></div></td>
+            <td><div id="medi_btn16" class="place medi"></div></td>
+          </tr>
+        </table>
+      </div>
+
+
+      <div id="mode">
+        <button id="show_medi" class="button">Play</button>
+      </div>
+
+      <!-- <button id="directToMap" class="button">Levels Map</button> -->
+
+      <div id="dashBoard">
+        <h3>Result : <span id="result_medi"></span></h3>
+        <h3>&nbsp;&nbsp;level : <span id="levelmedi"></span></h3>
+        <h3>&nbsp;&nbsp;score : <span id="scoremedi"></span></h3>
+        <h3>&nbsp;&nbsp;lives : <span id="livesmedi"></span> <img id="heart" src="images/heart.png" /></h3>
+        <h3>&nbsp;&nbsp;moves : <span id="movesmedi"></span></h3>
+
+      </div>
+
+
+    </div>
+    <!-- the end of Medium area -->
+
+    <!-- Level Hard Page -->
+    <div id="hardPlayArea" class="pages">
+      <div class="playPanel">
+        <table>
+          <tr>
+            <td><div id="hard_btn1" class="place hard"></div></td>
+            <td><div id="hard_btn2" class="place hard"></div></td>
+            <td><div id="hard_btn3" class="place hard"></div></td>
+            <td><div id="hard_btn4" class="place hard"></div></td>
+            <td><div id="hard_btn5" class="place hard"></div></td>
+          </tr>
+
+          <tr>
+            <td><div id="hard_btn6" class="place hard"></div></td>
+            <td><div id="hard_btn7" class="place hard"></div></td>
+            <td><div id="hard_btn8" class="place hard"></div></td>
+            <td><div id="hard_btn9" class="place hard"></div></td>
+            <td><div id="hard_btn10" class="place hard"></div></td>
+          </tr>
+
+          <tr>
+            <td><div id="hard_btn11" class="place hard"></div></td>
+            <td><div id="hard_btn12" class="place hard"></div></td>
+            <td><div id="hard_btn13" class="place hard"><img id="player" src="images/minions/sirene.png"></div></td>
+            <td><div id="hard_btn14" class="place hard"></div></td>
+            <td><div id="hard_btn15" class="place hard"></div></td>
+          </tr>
+
+          <tr>
+            <td><div id="hard_btn16" class="place hard"></div></td>
+            <td><div id="hard_btn17" class="place hard"></div></td>
+            <td><div id="hard_btn18" class="place hard"></div></td>
+            <td><div id="hard_btn19" class="place hard"></div></td>
+            <td><div id="hard_btn20" class="place hard"></div></td>
+          </tr>
+
+          <tr>
+            <td><div id="hard_btn21" class="place hard"></div></td>
+            <td><div id="hard_btn22" class="place hard"></div></td>
+            <td><div id="hard_btn23" class="place hard"></div></td>
+            <td><div id="hard_btn24" class="place hard"></div></td>
+            <td><div id="hard_btn25" class="place hard"></div></td>
+          </tr>
+
+        </table>
+      </div>
+
+
+      <div id="mode">
+        <button id="show_hard" class="button">Play</button>
+      </div>
+
+      <!-- <button id="directToMap" class="button">Levels Map</button> -->
+
+      <div id="dashBoard">
+        <h3>Result : <span id="result_hard"></span></h3>
+        <h3>&nbsp;&nbsp;level : <span id="levelhard"></span></h3>
+        <h3>&nbsp;&nbsp;score : <span id="scorehard"></span></h3>
+        <h3>&nbsp;&nbsp;lives : <span id="liveshard"></span> <img id="heart" src="images/heart.png" /></h3>
+        <h3>&nbsp;&nbsp;moves : <span id="moveshard"></span></h3>
+
+      </div>
+
+    </div>
+    <!-- the end of play area -->
+
+
+    <!-- the start of level map area -->
+    <div id="map">
+
+      <div id="level1" class="levels"><div class="filler"></div>1</div>
+      <div id="level2" class="levels"><div class="filler"></div>2</div>
+      <div id="level3" class="levels"><div class="filler"></div>3</div>
+      <div id="level4" class="levels"><div class="filler"></div>4</div>
+      <div id="level5" class="levels"><div class="filler"></div>5</div>
+      <div id="level6" class="levels"><div class="filler"></div>6</div>
+      <div id="level7" class="levels"><div class="filler"></div>7</div>
+      <div id="level8" class="levels"><div class="filler"></div>8</div>
+      <div id="level9" class="levels"><div class="filler"></div>9</div>
+      <div id="level10" class="levels"><div class="filler"></div>10</div>
+
+      <img id="map_character" src="images/minions/dracula_minion.png" />
+
+      <div id="levelType">
+        <h1>Easy</h1>
+        <h1>Level</h1>
+      </div>
+
+
+    </div>
+    <!-- the end of level map area -->
+
+    <!-- the start of looser area -->
+      <div id="looser" class="pages">
+        <img id="looserImg" src="images/minions/looser.png"/>
+        <h1>Losser ....</h1>
+      </div>
+    <!-- the end of looser area -->
+
+    <!-- the start of level transfer -->
+    <div id="levelTransfer" class="pages">
+      <h1>Level Stations</h1>
+      <div id="easyLevel" class="levels levTrs"><span class="levelWord">Easy</span></div>
+      <div id="mediumLevel" class="levels levTrs"><span class="levelWord">Medium</span></div>
+      <div id="hardLevel" class="levels levTrs"><span class="levelWord">Hard</div>
+
+      <img id="transfer_character" src="images/minions/dracula_minion.png" />
+    </div>
+    <!-- the end of level transfer -->
+
+    <!-- the start of select characters -->
+    <div id="selectCharacter" class="pages">
+      <h1>Select Your Character</h1>
+      <div class="charContainer">
+        <img id="dracula" class="charImg" src="images/minions/dracula_minion.png">
+      </div>
+      <div class="charContainer">
+        <img id="wolf" class="charImg" src="images/minions/wolf.png">
+      </div>
+      <div class="charContainer">
+        <img id="sirene" class="charImg" src="images/minions/sirene.png">
+      </div>
+      <div class="charContainer"></div>
+    </div>
+    <!-- the end of select charaters -->
+
+    <!-- Exit Check Model -->
+    <div id="ExitModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>
+            <h1>Are you sure you want to EXIT ? </h1>
+            <h2>(Hint : Minions Are happy With You)</h2>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button id="yes">Yes</button>
+          <button id="no">No</button>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of Model Box -->
+
+    <!-- the model Box -->
+
+    <div id="IronModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>You Have Won .....</h2>
+        </div>
+        <div class="modal-body">
+          <p>
+            <img class="badge" src="images/badges/ironMinion.gif" />
+          </p>
+        </div>
+        <div class="modal-footer">
+          <h3>Iron Minion Badge</h3>
+          <p>
+            For passing the first five levels in your new life as a minion
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <!-- End of Model Box -->
+
+  </div>
+
+
+  <script src="js/javaScript.js"></script>
+</body>
 
 
 </html>
