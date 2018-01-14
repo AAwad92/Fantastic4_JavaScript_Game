@@ -319,7 +319,7 @@ var validateMoves = function(){
         player1.setScore(player1.getScore()+(player1.getLevel()*500));
         player1.setLevel(player1.getLevel()+1);
         player1.setPlayerVars("");
-        if(player1.getLevel() == 3){
+        if(player1.getLevel() == 4){
           ironBadge.badge();
           ironBadge.span.onclick = function(){
             ironBadge.modal.style.display = "none";
@@ -329,10 +329,9 @@ var validateMoves = function(){
           easy.hide();
           badges.hide();
           if(player1.getLevel() == 11){
-            setTimeout(function(){
               levels.show();
               badges.hide();
-            },2500)
+
 
           }else{
             easy.hide();
@@ -531,7 +530,7 @@ var validateMovesmedi = function(){
     }
     if(counter == medi_level.getPattern().length){
         document.getElementById("result_medi").innerHTML = "Win";
-        document.getElementsByTagName("table")[0].style.border = "1px solid green";
+        document.getElementsByTagName("table")[1].style.border = "1px solid green";
         var place = document.getElementsByClassName("place");
         for(let i = 0;i < place.length;i++){
           place[i].style.border = "1px solid green";
@@ -544,10 +543,7 @@ var validateMovesmedi = function(){
           medium.hide();
           badges.hide();
           if(player1.getLevel() == 11){
-            setTimeout(function(){
               levels.show();
-              badges.hide();
-            },2500)
 
           }else{
             mapLevel.show();
@@ -563,7 +559,7 @@ var validateMovesmedi = function(){
 
     else{
         document.getElementById("result_medi").innerHTML = "Lose";
-        document.getElementsByTagName("table")[0].style.border = "1px solid red";
+        document.getElementsByTagName("table")[1].style.border = "1px solid red";
         var place = document.getElementsByClassName("place");
         for(let i = 0;i < place.length;i++){
           place[i].style.border = "1px solid red";
@@ -615,13 +611,17 @@ class hardLevel extends easyLevel{
 
   setDefaultNew(){
     document.getElementById(this.getTempId()).innerHTML = "";
-    document.getElementById("medi_btn6").innerHTML =this.getImageShow();
+    document.getElementById("hard_btn13").innerHTML =this.getImageShow();
     this.setPattern([13]);
     this.setIdToMove("hard_btn13");
     this.setNumOfMoves(0);
-    this.setQuitFlag(0);
+    // this.setQuitFlag(0);
+    this.setQuitFlag(-1)
+    this.setPlayMode(false)
+    this.setShowMode(true)
+    this.setThreadMode(false)
     document.getElementById("result").innerHTML = "";
-    document.getElementsByTagName("table")[0].style.border = "1px solid rgba(255,255,255,0.2)";
+    document.getElementsByTagName("table")[1].style.border = "1px solid rgba(255,255,255,0.2)";
     var place = document.getElementsByClassName("place");
     for(let i = 0;i < place.length;i++){
       place[i].style.border = "1px solid rgba(255,255,255,0.2)";
@@ -674,7 +674,7 @@ class hardLevel extends easyLevel{
       document.getElementById("hard_btn13").innerHTML = this.getImageShow();
       this.go(player1.getLevel()+1);
       document.getElementById("result").innerHTML = "";
-      document.getElementsByTagName("table")[0].style.border = "1px solid rgba(255,255,255,0.2)";
+      document.getElementsByTagName("table")[2].style.border = "1px solid rgba(255,255,255,0.2)";
       var place = document.getElementsByClassName("place");
       for(let i = 0;i < place.length;i++){
         place[i].style.border = "1px solid rgba(255,255,255,0.2)";
@@ -682,13 +682,14 @@ class hardLevel extends easyLevel{
     }
   }
 
+
   callBackPlay(){
       if(!this.getPlayMode() && this.getThreadMode()){
         document.getElementById(this.getTempId()).innerHTML = "";
         document.getElementById("hard_btn13").innerHTML = this.getImagePlay();
         this.setDefault();
         this.setPlayMode(true);
-        document.getElementById("moveshard").innerHTML = player1.getLevel() + 1 -easy_level.getNumOfMoves();
+        document.getElementById("moveshard").innerHTML = player1.getLevel() + 1 -hard_level.getNumOfMoves();
       }
   }
 
@@ -720,12 +721,14 @@ var playFuncHard = function(){
       if(hard_level.getIdToMove().length == 9){
         temp_container += hard_level.getIdToMove()[8];
       }else{
-        temp_container += hard_level.getI1dToMove()[8] + hard_level.getIdToMove()[9];
+        temp_container += hard_level.getIdToMove()[8] + hard_level.getIdToMove()[9];
       }
       hard_level.getPattern().push(parseInt(temp_container));
       hard_level.setNumOfMoves(hard_level.getNumOfMoves()+1);
-      document.getElementById("moveshard").innerHTML = player1.getLevel() + 1 -hard_level.getNumOfMoves()
-      validateMovesHard();1
+      document.getElementById("moveshard").innerHTML = player1.getLevel() + 1 -hard_level.getNumOfMoves();
+      console.log(hard_level.getNumOfMoves());
+      console.log(player1.getLevel());
+      validateMovesHard();
         }
     }
 }
@@ -742,7 +745,7 @@ var validateMovesHard = function(){
     }
     if(counter == hard_level.getPattern().length){
         document.getElementById("result_hard").innerHTML = "Win";
-        document.getElementsByTagName("table")[0].style.border = "1px solid green";
+        document.getElementsByTagName("table")[2].style.border = "1px solid green";
         var place = document.getElementsByClassName("place");
         for(let i = 0;i < place.length;i++){
           place[i].style.border = "1px solid green";
@@ -754,10 +757,7 @@ var validateMovesHard = function(){
           hard.hide();
           badges.hide();
           if(player1.getLevel() == 11){
-            setTimeout(function(){
               levels.show();
-              badges.hide();
-            },2500)
 
           }else{
           hard.hide();
@@ -773,7 +773,7 @@ var validateMovesHard = function(){
     }
     else{
         document.getElementById("result_hard").innerHTML = "Lose";
-        document.getElementsByTagName("table")[0].style.border = "1px solid red";
+        document.getElementsByTagName("table")[2].style.border = "1px solid red";
         var place = document.getElementsByClassName("place");
         for(let i = 0;i < place.length;i++){
           place[i].style.border = "1px solid red";
