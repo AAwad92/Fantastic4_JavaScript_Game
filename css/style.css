@@ -20,6 +20,13 @@
   display: none;
 }
 
+#easy img,#medium img,#hard img{
+  display: none;
+  width: 40px;
+  height: 28px;
+  margin-left: 20px;
+}
+
 #levelTransfer{
   display: none;
 }
@@ -765,4 +772,3 @@ table{
 #ExitModal .modal-body ,#ExitModal .modal-footer{
   height: 150px;
 }
-
